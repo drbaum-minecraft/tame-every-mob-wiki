@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Official community documentation for Tame Every Mob by drbaum. Search every supported mob and its taming items.">
+  <title>Tame Every Mob Wiki</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Tame Every Mob Wiki">
+      <span class="brand-mark">TEM</span>
+      <span>
+        <strong>Tame Every Mob</strong>
+        <small>Wiki</small>
+      </span>
+    </a>
+    <nav>
+      <a href="#taming">Taming</a>
+      <a href="#bosses">Bosses</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button id="langToggle" class="lang-btn" type="button">DE</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">OFFICIAL MOD DOCUMENTATION</div>
+        <h1>Tame Every Mob <span>Wiki</span></h1>
+        <p data-i18n="hero">
+          Find the correct taming item for every supported mob, plus special rules for bosses.
+        </p>
+        <div class="badges">
+          <span>Fabric 1.21.1</span>
+          <span>Source verified</span>
+          <span>by drbaum</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="pixel-heart">♥</div>
+        <div>
+          <strong id="mobCount">0</strong>
+          <span data-i18n="supported">supported mobs</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <strong data-i18n="versionTitle">Version note</strong>
+      <span data-i18n="versionText">
+        This page currently reflects the current Fabric 1.21.1 source (1.4.1 development). Older builds such as 1.3.2 can differ in some details.
+      </span>
+    </section>
+
+    <section id="taming" class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-i18n="guideLabel">TAMING GUIDE</div>
+          <h2 data-i18n="allMobs">All mobs & taming items</h2>
+        </div>
+        <div class="count"><span id="visibleCount">0</span> <span data-i18n="results">results</span></div>
+      </div>
+
+      <div class="controls">
+        <label class="search">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Search mobs or items…" autocomplete="off">
+        </label>
+        <div id="filters" class="filters"></div>
+      </div>
+
+      <div id="mobGrid" class="mob-grid"></div>
+      <div id="emptyState" class="empty" hidden data-i18n="noResults">No matching mobs found.</div>
+    </section>
+
+    <section id="bosses" class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow" data-i18n="bossLabel">SPECIAL TAMING</div>
+          <h2 data-i18n="bossTitle">Bosses</h2>
+        </div>
+      </div>
+      <div id="bossGrid" class="boss-grid"></div>
+      <p class="fineprint" data-i18n="multiplierNote">
+        Chance multipliers are relative to the mod's normal base taming chance. They are not standalone percentages.
+      </p>
+    </section>
+
+    <section id="faq" class="section">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">FAQ</div>
+          <h2 data-i18n="faqTitle">Common questions</h2>
+        </div>
+      </div>
+      <details open>
+        <summary data-i18n="faq1q">How do I tame a mob?</summary>
+        <p data-i18n="faq1a">Hold one of the listed taming items and use it on the mob. A failed attempt can consume the item, so multiple attempts may be required.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq2q">How do I tame an Enderman?</summary>
+        <p data-i18n="faq2a">Use an Eye of Ender or Chorus Fruit on the Enderman.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq3q">How do I tame the Ender Dragon?</summary>
+        <p data-i18n="faq3a">First defeat the dragon and complete “Free the End”. Then resummon it and use Dragon's Breath, an End Crystal, or the Dragon Egg on the resummoned dragon.</p>
+      </details>
+      <details>
+        <summary data-i18n="faq4q">My Red Taming Guide does not open. What can I do?</summary>
+        <p data-i18n="faq4a">Use this online list as a fallback and include your Minecraft version, loader, and mod version when reporting the guide issue.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <strong>Tame Every Mob</strong> · <span data-i18n="footer">Documentation generated from the mod's taming data.</span>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
